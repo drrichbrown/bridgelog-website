@@ -106,14 +106,14 @@
     }
 
     .hero-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.9fr);
-      gap: 24px;
-      align-items: stretch;
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        gap: 40px;
+        align-items: stretch;
     }
 
     .rich-note-card {
-      padding: clamp(28px, 4vw, 42px);
+      padding: clamp(22px, 2.5vw, 30px);
       border: 1px solid #b7ddc3;
       border-radius: 32px;
       background: linear-gradient(145deg, #ffffff, #eef7f0);
@@ -130,9 +130,12 @@
     }
 
     .hero-card {
-      overflow: hidden;
-      position: relative;
-      padding: clamp(38px, 7vw, 82px);
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        overflow: hidden;
+        position: relative;
+        padding: clamp(32px, 5vw, 56px);
       color: #fff;
       border-radius: 32px;
       background:
@@ -168,12 +171,12 @@
     }
 
     h1 {
-      max-width: 760px;
+      max-width: 680px;
       margin-bottom: 26px;
-      font-size: clamp(2.4rem, 5.2vw, 4.35rem);
+      font-size: clamp(2.25rem, 4.8vw, 4rem);
+      line-height: 1.10;
+      letter-spacing: -0.03em;
       font-weight: 750;
-      line-height: 1.08;
-      letter-spacing: -0.04em;
     }
 
     .hero-lead {
@@ -286,7 +289,7 @@
 
     .install-card {
       display: grid;
-      grid-template-columns: 1.4fr 0.6fr;
+      grid-template-columns: 65% 35%;
       gap: 28px;
       align-items: center;
       padding: clamp(24px, 5vw, 42px);
@@ -434,7 +437,43 @@
       background: linear-gradient(90deg, transparent, var(--line), transparent);
     }
 
-    @media (max-width: 880px) {
+    .gift-section {
+    padding-top:28px;
+    padding-bottom:52px;
+}
+.gift-card{
+    background:#fff;
+    border:1px solid #cde7d5;
+    border-radius:30px;
+    padding:42px 46px;
+    box-shadow:var(--shadow);
+}
+.gift-heading{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:22px;
+}
+.gift-icon{font-size:2.4rem;}
+.gift-heading h2{
+    margin:0;
+    color:var(--green-dark);
+}
+.gift-highlight{
+    font-size:1.16rem;
+    line-height:1.7;
+    margin-bottom:24px;
+}
+.gift-card p{
+    font-size:1.08rem;
+    line-height:1.75;
+}
+.gift-signature{
+    margin-top:28px;
+    font-weight:700;
+}
+
+@media (max-width: 880px) {
       .hero-layout { grid-template-columns: 1fr; }
       .showcase { grid-template-columns: 1fr; }
       .product-strip { grid-template-columns: 1fr; }
@@ -479,7 +518,7 @@
 <div class="hero-layout">
 <div class="hero-card">
 <p class="eyebrow">Private beta-testing site</p>
-<h1>Welcome to the BridgeLog beta.</h1>
+<h1>Welcome to the BridgeLog Beta.</h1>
 <p class="hero-lead">
             Thank you for helping test BridgeLog, the digital scoresheet for duplicate
             bridge players. This page explains how to install the app, get started,
@@ -490,14 +529,33 @@
 <aside class="rich-note-card" id="word-from-rich">
 <p class="eyebrow" style="color: var(--green-dark)">A personal note</p>
 <h2>A Brief Word from Rich</h2>
-<p>As many of you know, I’ve been jotting down bidding information on little slips of paper for years. I’ve also watched plenty of us struggle to record contracts, opening leads, results—and sometimes even the auction itself—accurately on paper scoresheets.</p>
-<p>My hope is that BridgeLog will make recording this information faster, easier, and more accurate, allowing all of us to enjoy duplicate bridge even more. Even better, by keeping complete records of every auction, opening lead, result, and note, BridgeLog gives both partners a powerful new way to review sessions, identify opportunities for improvement, and become better players.</p>
-<p>I truly appreciate your willingness to help test BridgeLog.</p>
-<p><strong>As a token of my appreciation, for as long as I continue to maintain BridgeLog, every Santa Barbara Bridge Club member who participates in the beta test and sends me at least one feedback email will receive all future BridgeLog updates free of charge.</strong></p>
-<p>Thank you very much for helping make BridgeLog the best app it can be.</p>
+
+<p>For years I've jotted bidding information on little slips of paper, and I've watched many players struggle to record contracts, opening leads, results—and sometimes even the auction itself—accurately on paper scoresheets.</p>
+
+<p>My hope is that BridgeLog will make recording faster, easier, and more accurate. Even better, by keeping complete records of every auction, opening lead, result, and note, BridgeLog gives partners a powerful new way to review sessions, identify opportunities for improvement, and become better players.</p>
+
+<p>Thank you sincerely for helping test BridgeLog.</p>
+
+
 </aside>
 </div>
 </div>
+</section>
+<section class="gift-section">
+    <div class="container">
+        <div class="gift-card">
+            <div class="gift-heading">
+                <span class="gift-icon">🎁</span>
+                <h2>My Gift to Beta Testers</h2>
+            </div>
+
+            <p class="gift-highlight"><strong>As a token of my appreciation, every Santa Barbara Bridge Club member who participates in the beta test and sends me at least one feedback email will receive all future BridgeLog updates free of charge, for as long as I continue to maintain BridgeLog.</strong></p>
+
+            <p>Thank you very much for helping make BridgeLog the best app it can be. I look forward to hearing your thoughts and suggestions.</p>
+
+            <p class="gift-signature">— Rich Brown</p>
+        </div>
+    </div>
 </section>
 <section id="glance">
 <div class="container">
@@ -628,7 +686,7 @@
 <div class="container">
 <div class="section-heading">
 <p class="eyebrow" style="color: var(--green-dark)">Testing priorities</p>
-<h2>What we would especially like you to test</h2>
+<h2>What I would especially like you to test</h2>
 <p>
             Use BridgeLog naturally, but pay particular attention to the areas below.
           </p>
