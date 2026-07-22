@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/>
-<meta content="noindex, nofollow, noarchive, nosnippet" name="googlebot"/>
+<meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/>
+<meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/>
 <meta content="Private instructions for invited BridgeLog beta testers." name="description"/>
 <title>BridgeLog™ Beta Testing</title>
 <style>
@@ -494,8 +494,82 @@
       .nav-wrap { min-height: 64px; }
       .footer-row { flex-direction: column; }
     }
-  </style>
-</head>
+  
+
+    .video-feature {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+      gap: 34px;
+      align-items: center;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.94);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.055);
+    }
+
+    .video-copy h2 {
+      margin-bottom: 12px;
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+    }
+
+    .video-copy p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .video-container {
+      width: 320px;
+      max-width: calc(100vw - 60px);
+      margin: 0 auto;
+}
+
+    .video-container video {
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      background:#000;
+}
+
+    @media (max-width: 880px) {
+      .video-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .video-copy {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .video-feature {
+        padding: 18px;
+        border-radius: 18px;
+      }
+
+      .video-container video {
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      background:#000;
+}
+    }
+
+.video-feature{
+grid-template-columns:1fr;
+text-align:center;
+}
+.video-copy{
+max-width:700px;
+margin:0 auto 18px;
+}
+</style>
+<meta content="no-referrer" name="referrer"/></head>
 <body>
 <header class="site-header">
 <div class="container nav-wrap">
@@ -503,7 +577,7 @@
 <span>Bridge</span><strong>Log</strong><sup>™</sup>
 </a>
 <nav aria-label="Beta tester navigation">
-<a href="#glance">Overview</a>
+<a href="#glance">Overview</a><a href="#video">Demo</a>
 <a href="#orientation">Orientation</a>
 <a href="#install">Install</a>
 <a href="#start">Getting Started</a>
@@ -512,8 +586,7 @@
 </nav>
 </div>
 </header>
-<main id="top">
-<section class="hero">
+<main id="top"><section class="hero">
 <div class="container">
 <div class="hero-layout">
 <div class="hero-card">
@@ -529,35 +602,25 @@
 <aside class="rich-note-card" id="word-from-rich">
 <p class="eyebrow" style="color: var(--green-dark)">A personal note</p>
 <h2>A Brief Word from Rich</h2>
-
 <p>For years I've jotted bidding information on little slips of paper, and I've watched many players struggle to record contracts, opening leads, results—and sometimes even the auction itself—accurately on paper scoresheets.</p>
-
 <p>My hope is that BridgeLog will make recording faster, easier, and more accurate. Even better, by keeping complete records of every auction, opening lead, result, and note, BridgeLog gives partners a powerful new way to review sessions, identify opportunities for improvement, and become better players.</p>
-
 <p>Thank you sincerely for helping test BridgeLog.</p>
-
-
 </aside>
 </div>
 </div>
-</section>
-<section class="gift-section">
-    <div class="container">
-        <div class="gift-card">
-            <div class="gift-heading">
-                <span class="gift-icon">🎁</span>
-                <h2>My Gift to Beta Testers</h2>
-            </div>
-
-            <p class="gift-highlight"><strong>As a token of my appreciation, every Santa Barbara Bridge Club member who participates in the beta test and sends me at least one feedback email will receive all future BridgeLog updates free of charge, for as long as I continue to maintain BridgeLog.</strong></p>
-
-            <p>Thank you very much for helping make BridgeLog the best app it can be. I look forward to hearing your thoughts and suggestions.</p>
-
-            <p class="gift-signature">— Rich Brown</p>
-        </div>
-    </div>
-</section>
-<section id="glance">
+</section><section class="gift-section">
+<div class="container">
+<div class="gift-card">
+<div class="gift-heading">
+<span class="gift-icon">🎁</span>
+<h2>My Gift to Beta Testers</h2>
+</div>
+<p class="gift-highlight"><strong>As a token of my appreciation, every Santa Barbara Bridge Club member who participates in the beta test and sends me at least one feedback email will receive all future BridgeLog updates free of charge, for as long as I continue to maintain BridgeLog.</strong></p>
+<p>Thank you very much for helping make BridgeLog the best app it can be. I look forward to hearing your thoughts and suggestions.</p>
+<p class="gift-signature">— Rich Brown</p>
+</div>
+</div>
+</section><section id="glance">
 <div class="container">
 <div class="showcase">
 <div class="showcase-copy">
@@ -589,15 +652,29 @@
 </div>
 <div class="quiet-divider"></div>
 </div>
-</section>
-<section id="orientation">
+</section><section id="video">
+<div class="container">
+<div class="video-feature">
+<div class="video-copy">
+<p class="eyebrow" style="color: var(--green-dark)">Watch first</p>
+<h2>Before your first session</h2>
+<p>Watch this 2-minute demonstration on how to set up BridgeLog, record boards, and review completed sessions.</p>
+</div>
+<div class="video-container">
+<video controls="" poster="BridgeLogVideoPoster.jpg" preload="metadata">
+<source src="BridgeLogDemoVideo.mp4" type="video/mp4"/>
+        Your browser does not support HTML5 video.
+      </video>
+</div>
+</div>
+</div>
+</section><section id="orientation">
 <div class="container">
 <div class="section-heading">
 <p class="eyebrow" style="color: var(--green-dark)">Before you begin</p>
 <h2>Before You Play Your First Board</h2>
 <p>I tried to make BridgeLog as intuitive as possible, but there are a few things you should know before getting started.</p>
 </div>
-
 <div class="grid grid-3">
 <article class="card"><div class="step-number">1</div><h3>Start a New Session</h3><p>Select your partner and the game location from the lists. If your partner or location is not already listed, you can easily add it.</p></article>
 <article class="card"><div class="step-number">2</div><h3>Choose Your Partnership Direction</h3><p>Select whether you will play <strong>North and/or East</strong>, or <strong>South and/or West</strong>.</p><p>In a Howell movement, one player must play <strong>North and East</strong>, and the other must play <strong>South and West</strong>.</p></article>
@@ -608,9 +685,7 @@
 <article class="card full-width-card"><div class="step-number">7</div><h3>Send Feedback</h3><p>Please send at least one feedback email after you have used BridgeLog. Tell me what worked well, what did not work as expected, and how BridgeLog could be easier and better. Screenshots are especially helpful when reporting a problem.</p></article>
 </div>
 </div>
-</section>
-
-<section id="install">
+</section><section id="install">
 <div class="container">
 <div class="install-card" style="display: block;">
 <div>
@@ -646,8 +721,7 @@
           and reports during the beta.
         </div>
 </div>
-</section>
-<section id="start">
+</section><section id="start">
 <div class="container">
 <div class="section-heading">
 <p class="eyebrow" style="color: var(--green-dark)">First-time setup</p>
@@ -684,8 +758,7 @@
 </article>
 </div>
 </div>
-</section>
-<section id="testing">
+</section><section id="testing">
 <div class="container">
 <div class="section-heading">
 <p class="eyebrow" style="color: var(--green-dark)">Testing priorities</p>
@@ -724,8 +797,7 @@
 </article>
 </div>
 </div>
-</section>
-<section id="feedback">
+</section><section id="feedback">
 <div class="container">
 <div class="feedback-box">
 <div>
@@ -736,7 +808,7 @@
               you expected. Screenshots are especially helpful.
             </p>
 </div>
-<a class="button" href="mailto:beta@bridgelog.app?subject=BridgeLog%20Beta%20Feedback&body=BridgeLog%20Beta%20Feedback%0A%0ADevice%3A%0AiPhone%20model%3A%0A%0AiOS%20version%3A%0A%0AWhat%20I%20tested%3A%0A%0AWhat%20worked%20well%3A%0A%0AProblems%2C%20questions%2C%20or%20suggestions%3A%0A">
+<a class="button" href="mailto:beta@bridgelog.app?subject=BridgeLog%20Beta%20Feedback&amp;body=BridgeLog%20Beta%20Feedback%0A%0ADevice%3A%0AiPhone%20model%3A%0A%0AiOS%20version%3A%0A%0AWhat%20I%20tested%3A%0A%0AWhat%20worked%20well%3A%0A%0AProblems%2C%20questions%2C%20or%20suggestions%3A%0A">
             Send Beta Feedback
           </a>
 </div>
@@ -751,46 +823,7 @@
 </ul>
 </div>
 </div>
-</section>
-<section id="faq">
-<div class="container">
-<div class="section-heading">
-<p class="eyebrow" style="color: var(--green-dark)">Questions</p>
-<h2>Beta-testing FAQs</h2>
-</div>
-<details>
-<summary>Will installing a new beta version erase my sessions?</summary>
-<p>
-            A routine TestFlight update should retain app data, but beta software
-            can behave unexpectedly. Please report any missing profiles, partners,
-            locations, sessions, or boards immediately.
-          </p>
-</details>
-<details>
-<summary>What should I do when TestFlight says a build has expired?</summary>
-<p>
-            Open TestFlight and install the newest available BridgeLog build. If
-            none appears, contact Rich so he can check the current beta release.
-          </p>
-</details>
-<details>
-<summary>Should I report small wording or layout problems?</summary>
-<p>
-            Yes. Please report anything confusing, crowded, difficult to read,
-            inconsistent, or slower than using a paper scoresheet.
-          </p>
-</details>
-<details>
-<summary>What information is most useful in a bug report?</summary>
-<p>
-            Include your iPhone model, iOS version, BridgeLog build if visible,
-            the screen you were using, the steps that led to the problem, and a
-            screenshot when possible.
-          </p>
-</details>
-</div>
-</section>
-</main>
+</section></main>
 <footer>
 <div class="container footer-row">
 <div>
@@ -799,7 +832,7 @@
 </div>
 <div>
         BridgeLog™ Beta<br/>
-        <a href="privacy.html">Privacy Policy</a> ·
+<a href="privacy.html">Privacy Policy</a> ·
         <a href="terms.html">Terms of Use</a> ·
         <a href="mailto:beta@bridgelog.app">Send Beta Feedback</a><br/>
         © 2026 Richard L. Brown. All rights reserved.
